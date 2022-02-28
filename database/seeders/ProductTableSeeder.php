@@ -21,7 +21,7 @@ class ProductTableSeeder extends Seeder
         $product->description = 'The First PlayStation';
         $product->url_img= 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/PSX-Console-wController.png/1200px-PSX-Console-wController.png';
         $product->price = '155000';
-        $product->stock = '20';
+        $product->stock = '0';
         $product->save();
 
         $product1 = new Product();
@@ -45,7 +45,7 @@ class ProductTableSeeder extends Seeder
         $product3->description = 'New Generation Of PlayStation';
         $product3->url_img= 'https://m.media-amazon.com/images/I/416Jj3ZyoAS._AC_.jpg';
         $product3->price = '600000';
-        $product3->stock = '8';
+        $product3->stock = '0';
         $product3->save();
 
         $product4 = new Product();
