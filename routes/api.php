@@ -31,5 +31,5 @@ Route::get('/deleteproduct/{idUser}/{idProduct}',[WishlistController::class,'del
 Route::get('/addproductwish/{idUser}/{idProduct}',[WishlistController::class,'addProductWish']);
 
 Route::get('/collectioncart/{id}',[CartController::class,'collectionCart']);
-Route::get('/deleteproductcart/{idUser}/{idProduct}',[CartController::class,'deleteProductCart']);
+Route::get('/deleteproductcart/{id}',[CartController::class,'deleteProductCart']);
 Route::get('/addproductcart/{idUser}/{idProduct}',[CartController::class,'addProductCart']);

@@ -10,7 +10,7 @@ class CartController extends Controller
 {
     public function collectionCart($id)
     {
-        $data = Cart::select('products.name', 'products.description','products.url_img','products.id','products.price','products.stock')
+        $data = Cart::select('products.name', 'products.description','products.url_img','products.id','products.price','products.stock','carts.id')
             ->join('products', 'carts.product_id', '=', 'products.id')
             ->where('carts.user_id', '=', $id)
             ->get();
@@ -18,9 +18,9 @@ class CartController extends Controller
         return $data;
     }
 
-    public function deleteProductCart($idUser, $idProduct)
+    public function deleteProductCart($id)
     {
-        $data = DB::delete('DELETE FROM carts WHERE user_id = ?  AND  product_id = ? ', [$idUser, $idProduct]);
+        $data = DB::delete('DELETE FROM carts WHERE id = ?   ', [$id]);
     }
 
     public function addProductCart($idUser, $idProduct)
